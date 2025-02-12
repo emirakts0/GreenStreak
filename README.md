@@ -8,8 +8,7 @@
 [![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff)](#)
 [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)
 
-
-> Because your GitHub profile deserves to be as green as a summer meadow!
+<div align="center">Because your GitHub profile deserves to be as green as a summer meadow!</div>
 
 </div>
 
@@ -17,20 +16,6 @@
 
 A GitHub contribution automation tool that lets you schedule commits with custom patterns. Built with Spring Boot and React, featuring Quartz scheduler for reliable timing control. 
 Deploy GreenStreak on your server in no time—just run single command
-
-## Some Screenshots
-
-<div >
-  <img src="images/fe-image- (1).png" alt="Login" width="400"/>
-  <img src="images/fe-image- (2).png" alt="Dashboard 1" width="400"/>
-  <img src="images/fe-image- (3).png" alt="schedule" width="400"/>
-</div>
-
-<div >
-  <img src="images/fe-image- (4).png" alt="Dashboard 2" width="400"/>
-  <img src="images/fe-image- (10).png" alt="cancel" width="400"/>
-  <img src="images/fe-image- (8).png" alt="history 2 Selection" width="400"/>
-</div>
 
 
 ## Quick Start
@@ -67,6 +52,23 @@ Deploy GreenStreak on your server in no time—just run single command
 4. That’s it—GreenStreak will do the rest!
 
 
+## Some Screenshots
+
+<div >
+  <img src="images/fe-image- (1).png" alt="Login" width="400"/>
+  <img src="images/fe-image- (2).png" alt="Dashboard 1" width="400"/>
+  
+</div>
+
+<div >
+  <img src="images/fe-image- (3).png" alt="schedule" width="400"/>
+  <img src="images/fe-image- (4).png" alt="Dashboard 2" width="400"/>
+</div>
+
+<div >
+  <img src="images/fe-image- (10).png" alt="cancel" width="400"/>
+  <img src="images/fe-image- (8).png" alt="history 2 Selection" width="400"/>
+</div>
 
 
 ## FAQ
