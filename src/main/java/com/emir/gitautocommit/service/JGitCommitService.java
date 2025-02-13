@@ -213,7 +213,7 @@ public class JGitCommitService {
         }
     }
 
-    private void clearDirectory(File directory) throws IOException {
+    public void clearDirectory(File directory) throws IOException {
         if (directory.exists() && directory.isDirectory()) {
             log.debug("Clearing directory: {}", directory.getAbsolutePath());
             File[] files = directory.listFiles();

@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.quartz.JobDataMap;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
@@ -54,6 +55,8 @@ public class AutoCommitManagementService {
         jobDataMap.put("localRepoPath", localRepoPath);
 
         try {
+            jGitCommitService.clearDirectory(new File(localRepoPath));
+
             String cronExpression = CronTranslator.generateCronExpression(requestDto.getCommitIntervalDays(), requestDto.getDailyCommitTriggerTime());
             Date nextExecutionTime = quartzSchedulerService.scheduleJob(jobId, AutoCommitJob.class, cronExpression, jobDataMap);
             activeJobId = jobId;
