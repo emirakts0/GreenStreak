@@ -39,7 +39,7 @@ public class AutoCommitJob implements Job {
             commitCount = parseCommitCount(autoCommitRequestDto.getCommitCountRange());
             log.debug("Selected commit count for this execution: {} (from range: {})", commitCount, autoCommitRequestDto.getCommitCountRange());
             
-            commitService.makeNCommits(commitCount, localRepoPath, autoCommitRequestDto.getBranch(), autoCommitRequestDto.getRepositoryUrl());
+            commitService.makeNCommits(commitCount, localRepoPath, autoCommitRequestDto.getBranch(), autoCommitRequestDto.getRepositoryUrl(), autoCommitRequestDto.getUsername(), autoCommitRequestDto.getEmail());
             executionCount++;
             totalCommits += commitCount;
             log.info("Commit job execution successful - Created {} commits", commitCount);

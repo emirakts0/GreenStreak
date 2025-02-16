@@ -9,6 +9,10 @@ public class AutoCommitRequestDto {
     @Pattern(regexp = "^[a-zA-Z0-9-_]+$", message = "Username can only contain letters, numbers, hyphens, and underscores")
     private String username;
 
+    @NotBlank(message = "Email is required")
+    @Email(message="Invalid email")
+    private String email;
+
     @NotBlank(message = "Token is required")
     @Size(min = 8, message = "Token must be at least 8 characters long")
     private String token;

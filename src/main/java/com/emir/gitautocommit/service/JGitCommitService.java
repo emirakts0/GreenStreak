@@ -63,7 +63,7 @@ public class JGitCommitService {
         }
     }
 
-    public void makeNCommits(Integer commitCount, String repoPath, String branch, String remoteUrl) {
+    public void makeNCommits(Integer commitCount, String repoPath, String branch, String remoteUrl, String username, String email) {
         log.info("Starting commit operation - Count: {}, Branch: {}, Repository: {}", commitCount, branch, remoteUrl);
         validateMakeCommitsParameters(commitCount, repoPath, branch, remoteUrl);
         
@@ -80,7 +80,7 @@ public class JGitCommitService {
             pullChanges(git);
 
             File commitFile = createOrGetCommitFile(repoDir);
-            performCommits(git, commitFile, commitCount);
+            performCommits(git, commitFile, commitCount, username, email);
 
             pullChanges(git);
             pushChanges(git);
@@ -194,12 +194,16 @@ public class JGitCommitService {
         return commitFile;
     }
 
-    private void performCommits(Git git, File commitFile, int commitCount) throws IOException, GitAPIException {
+    private void performCommits(Git git, File commitFile, int commitCount, String username, String email) throws IOException, GitAPIException {
         log.debug("Starting commit sequence - Total commits to create: {}", commitCount);
         for (int i = 0; i < commitCount; i++) {
             appendRandomLine(commitFile);
             git.add().addFilepattern("daily_commit.txt").call();
-            git.commit().setMessage(StrUtils.getRandomCommitMessage()).call();
+            git.commit()
+                    .setMessage(StrUtils.getRandomCommitMessage())
+                    .setAuthor(username, email)
+                    .setCommitter(username, email)
+                    .call();
             log.debug("Created commit {}/{}", i + 1, commitCount);
         }
         log.debug("Commit sequence completed successfully");
