@@ -77,13 +77,3 @@ Deploy GreenStreak on your server in no time—just run single command
 | **Question** | **Answer** |
 |--------------|------------|
 | **I'm going to provide my token, but how can I trust it's secure?** | It only accesses your selected, non-critical repo. Use a token with *minimal permissions*. |
-| **Is this cheating?** | I prefer to call it *"gardening automation."* |
-| **Will this make me a better developer?** | **No**, but it will make your profile look like one! *(Just kidding—real skills come from real coding.)* |
-
-
-## Disclaimer
-
-This tool is meant for educational and demonstration purposes. Use it responsibly and in accordance with GitHub's terms of service. Remember, quality contributions are always better than quantity! 
-
-
-#
